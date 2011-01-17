@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0617BE80-26E2-42E6-88F2-EDC32297532D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ks_admin</RootNamespace>
+    <AssemblyName>ks_admin</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <ApplicationIcon>System Preferences.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customization\DockHelper.cs" />
+    <Compile Include="Customization\Extender.cs" />
+    <Compile Include="Customization\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customization\Resources.Designer.cs" />
+    <Compile Include="Customization\Strings.Designer.cs" />
+    <Compile Include="Customization\VS2003AutoHideStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customization\VS2003DockPaneCaption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customization\VS2003DockPaneStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Explorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explorer.designer.cs">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customization\Resources.resx" />
+    <EmbeddedResource Include="Customization\Strings.resx" />
+    <EmbeddedResource Include="Explorer.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolWindow.designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+    <Content Include="Customization\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelBottom.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelBottom_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelFill.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelFill_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelLeft.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelLeft_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelRight.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelRight_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelTop.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_AutoHideNo.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_AutoHideYes.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_CloseDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_CloseEnabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_CloseDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_CloseEnabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollLeftDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollLeftEnabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollRightDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollRightEnabled.bmp" />
+    <Content Include="Images\ArrowDown.bmp" />
+    <Content Include="Images\ArrowUp.bmp" />
+    <Content Include="Images\Bitmap.ico" />
+    <Content Include="Images\BlankIcon.ico" />
+    <Content Include="Images\ClosedFolder.ICO" />
+    <Content Include="Images\CSFile.ico" />
+    <Content Include="Images\CSProject.ico" />
+    <Content Include="Images\File.ico" />
+    <Content Include="Images\Form.ico" />
+    <Content Include="Images\Mouse.bmp" />
+    <Content Include="Images\msenv22.ico" />
+    <Content Include="Images\New.ico" />
+    <Content Include="Images\Open.ico" />
+    <Content Include="Images\OpenFolder.ICO" />
+    <Content Include="Images\OutputWindow.ico" />
+    <Content Include="Images\PropertyWindow.ico" />
+    <Content Include="Images\Reference.ico" />
+    <Content Include="Images\References.ico" />
+    <Content Include="Images\SolutionExplorer.ico" />
+    <Content Include="Images\TaskListWindow.ico" />
+    <Content Include="Images\ToolboxWindow.ico" />
+    <Content Include="Images\XmlFile.ico" />
+    <Content Include="System Preferences.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
